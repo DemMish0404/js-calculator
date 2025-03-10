@@ -1,0 +1,160 @@
+@import url('./font.css');
+
+/* ---ОБНУЛЕНИЕ------- */
+// плюс для поделючения шрифтов не забывать добавлять в конец кода подключания &display=swap
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+a{
+	color: inherit;
+}
+a,button {
+	
+	text-decoration: none;
+   cursor: pointer;
+}
+button{
+   background: none;
+   border: none;
+   outline: none;
+   
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+html{
+	scroll-behavior: smooth;
+}
+html,
+body {
+	height: 100%;
+
+}
+body {
+	font-family:  "Montserrat", Arial, Helvetica, sans-serif;
+   // font-size: ;
+   color: #000;
+}
+
+
+
+[class*="__container"]{
+
+	max-width: 1440px;
+	margin: 0px auto;
+  padding: 0px 15px;
+}
+@media(max-width: 1087px){
+  [class*="__container"]{
+    max-width: 970px;
+  }
+}
+
+
+
+/* ---TABLET все объединено ниже------- */
+@media(max-width: 991.98px){
+  
+}
+
+
+
+/* ---MOBILE ------- */
+@media(max-width: 767.98px){
+  [class*="__container"]{
+    max-width: none;
+  }
+}
+/* ---MOBILE SMALL ------- */
+@media(max-width: 479.98px){
+   
+}
+
+
+/* ---ОБНУЛЕНИЕ END------- */
+
+//! variables
+$transitionEffect: all 0.3s ease 0s;
+
+//!variables
+
+//? БЭМ блоки 
+
+
+//? БЭМ блоки END
+body{
+   padding: 50px 15px ;
+   background-color: wheat;
+}
+.calculator {
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 5px;
+   
+   &__item {
+      background-color: cadetblue;
+      transition: $transitionEffect;
+      display: flex;
+      padding: 5px;
+      min-height: 60px;
+      align-items: center;
+      justify-content: center;
+
+      &:hover{
+         background-color: #fff;
+      }
+   }
+}
+.item-show-results {
+   background-color: gray;
+   color: #fff;
+   justify-content: end;
+   grid-column: span 4;
+
+   &:hover{
+      background-color: gray;
+   }
+}
+.item-AC {
+   grid-column: span 2 
+}
+.item-DEL {
+}
+.item-DIVIDE {
+}
+.item-number {
+}
+.item-MULTIPLY {
+}
+.item-ADD-UP {
+}
+.item-SUBSTRACT {
+}
+.item-DOT {
+}
+.item-GET-RESULTS {
+   grid-column: span 2;
+}
+.item-BRACE {
+}
